@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from OpenSSL import SSL
+from flask_talisman import Talisman
+
 app = Flask('Detecteur-ia')
 barthez_tokenizer = AutoTokenizer.from_pretrained("moussaKam/barthez")
 model = AutoModelForSequenceClassification.from_pretrained("Anvil-ML/detecteur-ia")
@@ -44,5 +47,7 @@ def results():
 
         return render_template('resultsform.html', text_sentence=text_sentence, result=result)
 
+Talisman(app, content_security_policy=None)
 
-app.run("localhost", "9999", debug=True)
+sslctx = ("/etc/letsencrypt/live/detecteur-ia.fr/fullchain.pem", "/etc/letsencrypt/live/detecteur-ia.fr/privkey.pem")
+app.run(host="0.0.0.0", port="443", debug=False, use_reloader=False, ssl_context=sslctx)
