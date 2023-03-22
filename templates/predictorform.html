@@ -62,13 +62,20 @@
       <p style="text-align: left;"><a href="https://www.linkedin.com/in/villattea/">LinkedIn</a></p>
     </div>
     <div class="col-sm-8 text-left">
-      <h1>Detecteur d'IA</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1>Détecteur d'IA</h1>
+      <p>
+        Bienvenue sur ce site dédié à la détection de contenu généré par de l’IA ! </br> </br>
+        Pour analyser du texte, rien de plus simple : copiez-le dans la zone prévue à cet effet et cliquez sur « Valider » ; vous obtiendrez rapidement un résultat, qui sera une probabilité que le texte entré soit rédigé par une IA comme ChatGPT, BARD ou LLaMA, allant de très faible à très élevée. </br> </br>
+        Cet outil a été développé avec pour objectif d’assister les éducateurs à empêcher l’utilisation abusive de l’IA par des élèves souhaitant tricher, préserver ainsi l’instruction des futurs élèves qui grandiront entourés par des outils d’IA.  </br>
+        L’analyse est faite par un modèle de machine learning entraîné sur une grande quantité de textes générés par des humains et par de l’IA. Cet entraînement a été configuré pour optimiser la précision, c’est-à-dire que le modèle sera permissif (en cas de doute, il préfèrera classifier un texte comme humain pour éviter d’accuser un à tort). Une conséquence positive de ce parti pris est que les textes générés par de l’IA et remaniés par un humain seront considérés comme humains. Dans un contexte éducatif, L’IA doit rester un assistant, pas un remplaçant. </br>
+        J’espère que cet outil vous sera utile. En cas de mauvaise classification, n’hésitez pas à me la signaler via mes profils GitHub ou LinkedIn. Les liens sont à votre disposition sur la colonne de gauche.
+
+      </p>
       <hr>
       <h3>Entrez le texte à analyser ici :</h3>
       <form action = "https://detecteur-ia.fr:443/results" method = "POST">
-          <textarea name="text_sentence" style="width: 800px; height: 200px; display: block; white-space: pre-wrap; word-wrap: break-word; line-height: 1.5em; text-align: left; resize: none;"></textarea>
-          <button type="submit">Valider</button>
+          <textarea name="text_sentence" style="width: 800px; height: 200px; display: block; white-space: pre-wrap; word-wrap: break-word; line-height: 1.5em; text-align: left; resize: none; margin-bottom: 5px;"></textarea>
+          <button type="submit" style="margin-bottom: 5px;">Valider</button>
       </form>
     </div>
     <div class="col-sm-2 sidenav">
