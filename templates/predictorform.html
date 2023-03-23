@@ -73,10 +73,11 @@
       </p>
       <hr>
       <h3>Entrez le texte à analyser ici :</h3>
-      <form action = "https://detecteur-ia.fr:443/results" method = "POST">
-          <textarea name="text_sentence" style="width: 800px; height: 200px; display: block; white-space: pre-wrap; word-wrap: break-word; line-height: 1.5em; text-align: left; resize: none; margin-bottom: 5px;"></textarea>
-          <button type="submit" style="margin-bottom: 5px;">Valider</button>
-      </form>
+      <script
+        type="module"
+        src="https://gradio.s3-us-west-2.amazonaws.com/3.21.0/gradio.js"
+      ></script>
+      <gradio-app src="https://anvil-ml-detecteur-ia.hf.space"></gradio-app>
     </div>
     <div class="col-sm-2 sidenav">
       <!--
