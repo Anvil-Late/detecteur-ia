@@ -40,7 +40,7 @@ def results():
 
         text_sentence = request.form['text_sentence']
         input_ids = torch.tensor(
-            [barthez_tokenizer.encode(text_sentence, add_special_tokens=True)]
+            [barthez_tokenizer.encode(text_sentence, truncation=True, padding=True, add_special_tokens=True)]
         )
         predict = model.forward(input_ids)[0]
         result = interpret_pred_with_sensibility(predict)
