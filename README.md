@@ -10,3 +10,4 @@ It is pretrained on a corpus of 15 000 of french articles that have been summari
 
 
 Licensed under CC BY-NC-SA 4.0 
+Project is abandonned for now
